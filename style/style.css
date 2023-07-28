@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -49,9 +48,7 @@ body {
 }
 .button__purple:hover {
   background-image: linear-gradient(200.64deg, #4e1496 -5.2%, #eea0d8 110.74% white);
-}
-
-/*********** Header ***********/
+} /*********** Header ***********/
 .title {
   display: flex;
   justify-content: center;
@@ -113,8 +110,8 @@ body {
   padding-bottom: 50px;
 }
 
-.étapes {
-  background-color: var(--main-bg-color);
+.etapes {
+  background-color: #F6F6F6;
   border-radius: 25px;
   padding: 15px 32px;
   text-align: center;
