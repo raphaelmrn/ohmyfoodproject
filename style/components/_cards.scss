@@ -1,0 +1,27 @@
+.card{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+    width: 340px;
+    height: 251px;
+	padding-bottom: 30px;
+}
+
+.card-header img{
+    object-fit: cover;
+    width: 340px;
+    height: 251px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.card-body {
+	background-color: var(--alternate-bg-color);
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	width: 340px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}

@@ -1,0 +1,20 @@
+.rectangle{
+    display: flex;
+    height: 29px;
+    width: 80px;
+    background-color: #99E2D0;
+}
+
+.circle{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    border-radius: 25px;
+    width: 24px;
+    height: 24px;
+    background-color: #9356DC;
+    color: #FFFF;
+    margin: -40px;
+}
