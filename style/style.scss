@@ -1,5 +1,5 @@
 @import "./components/setup";
-.h2{
+h2{
     font-weight: 700;
     font-size: 24px;
 }
@@ -11,10 +11,12 @@
 		&-grey{
 		color: #7F7F7F;
 		}
-		&-purple{
-			color: purple;
+		&-pirple{
+			color: #9356DC;
 		}
 }
+
+
 @import "./components/button";
 
 /*********** Header ***********/
@@ -58,6 +60,7 @@
 	align-content: center;
 	align-items: center;
 	padding-bottom: 50px;
+	padding-top: 20px;
 }
 
 .intro-text{
@@ -87,7 +90,7 @@
 	height: 72.38px;
 	background-color: #F6F6F6;
 	border-radius: 25px;
-	padding: 15px 32px;
+	padding-left: 32px;
 	font-size: 16px;
 	font-weight: 500;
 	margin-bottom: 25px;
@@ -102,7 +105,7 @@
 	padding-left: 17px;
 	padding-right: 18px;
 	padding-bottom: 90px;
-	gap: 40px;
+	gap: 30px;
 }
 @import "./components/cards";
 @import "./components/wiggle";
