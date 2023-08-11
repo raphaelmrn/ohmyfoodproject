@@ -4,19 +4,6 @@ h2{
     font-size: 24px;
 }
 
-.icon{
-	color: black;
-	display: flex;
-
-		&-grey{
-		color: #7F7F7F;
-		}
-		&-pirple{
-			color: #9356DC;
-		}
-}
-
-
 @import "./components/button";
 
 /*********** Header ***********/
@@ -86,11 +73,11 @@ h2{
 	text-align: center;
 	display: flex;
 	border: none;
-	width: 335px;
-	height: 72.38px;
+	position: relative;
+	box-sizing: border-box;
 	background-color: #F6F6F6;
 	border-radius: 25px;
-	padding-left: 32px;
+	padding: 10px 42px;
 	font-size: 16px;
 	font-weight: 500;
 	margin-bottom: 25px;

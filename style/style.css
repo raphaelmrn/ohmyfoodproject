@@ -18,17 +18,6 @@ h2 {
   font-size: 24px;
 }
 
-.icon {
-  color: black;
-  display: flex;
-}
-.icon-grey {
-  color: #7F7F7F;
-}
-.icon-pirple {
-  color: #9356DC;
-}
-
 .button {
   border-radius: 25px;
   padding: 25px 25px;
@@ -123,11 +112,11 @@ h2 {
   text-align: center;
   display: flex;
   border: none;
-  width: 335px;
-  height: 72.38px;
+  position: relative;
+  box-sizing: border-box;
   background-color: #F6F6F6;
   border-radius: 25px;
-  padding-left: 32px;
+  padding: 10px 42px;
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 25px;
@@ -152,6 +141,7 @@ h2 {
 }
 
 .card-header img {
+  display: block;
   -o-object-fit: cover;
      object-fit: cover;
   width: 346px;
@@ -194,7 +184,21 @@ h2 {
   height: 24px;
   background-color: #9356DC;
   color: white;
-  margin: -40px;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.icon {
+  color: black;
+  display: flex;
+  padding-left: 10%;
+}
+.icon-grey {
+  color: #7F7F7F;
+}
+.icon-pirple {
+  color: #9356DC;
 }
 
 /*********** Footer ***********/

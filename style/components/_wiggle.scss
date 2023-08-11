@@ -16,5 +16,20 @@
     height: 24px;
     background-color: #9356DC;
     color: #FFFF;
-    margin: -40px;
+		top: 50%;
+		left: 0;
+		transform: translate(-50%,-50%);
+}
+
+.icon{
+	color: black;
+	display: flex;
+	padding-left: 10%;
+
+		&-grey{
+		color: #7F7F7F;
+		}
+		&-pirple{
+			color: #9356DC;
+		}
 }
