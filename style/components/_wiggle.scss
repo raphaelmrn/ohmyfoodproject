@@ -1,9 +1,21 @@
 .rectangle{
     display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
     height: 29px;
     width: 80px;
     background-color: #99E2D0;
+		color: #008766;
+		z-index: 1;
 }
+
+.badge {
+  position: absolute;
+	right: 15px;
+	top: 15px;
+}
+
 
 .circle{
     position: absolute;
@@ -33,3 +45,9 @@
 			color: #9356DC;
 		}
 }
+
+	.icones{
+		&:active{
+			color: purple;
+		}
+	}

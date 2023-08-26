@@ -131,16 +131,28 @@ h2 {
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
-  padding-left: 17px;
-  padding-right: 18px;
+  padding-right: 15px;
   padding-bottom: 90px;
   gap: 30px;
+}
+
+.bis {
+  padding-left: 30px;
+  padding-bottom: 10px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  transition: transform 200ms ease-in-out;
+}
+.card:hover {
+  transform: scale(1.08);
+}
+
+.card-header {
+  position: relative;
 }
 
 .card-header img {
@@ -171,9 +183,20 @@ h2 {
 
 .rectangle {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   height: 29px;
   width: 80px;
   background-color: #99E2D0;
+  color: #008766;
+  z-index: 1;
+}
+
+.badge {
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
 
 .circle {
@@ -202,6 +225,10 @@ h2 {
 }
 .icon-pirple {
   color: #9356DC;
+}
+
+.icones:active {
+  color: purple;
 }
 
 /*********** Footer ***********/

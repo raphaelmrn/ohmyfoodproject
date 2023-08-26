@@ -92,10 +92,14 @@ h2{
 	display: grid;
 	justify-items: center;
 	grid-template-columns: 1fr;
-	padding-left: 17px;
-	padding-right: 18px;
+	padding-right: 15px;
 	padding-bottom: 90px;
 	gap: 30px;
+}
+
+.bis{
+	padding-left: 30px;
+	padding-bottom: 10px;
 }
 @import "./components/cards";
 @import "./components/wiggle";
