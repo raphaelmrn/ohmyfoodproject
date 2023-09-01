@@ -2,6 +2,13 @@
   font-family: 'Roboto', sans-serif;
 }
 
+ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
 :root {
   --main-bg-color: #F3F3F3;
   --alternate-bg-color: #FFFFFF;

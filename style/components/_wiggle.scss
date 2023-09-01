@@ -46,8 +46,10 @@
 		}
 }
 
-	.icones{
-		&:active{
-			color: purple;
+.icones{
+	&:active{
+		color: rbga(147, 86, 220 1);
 		}
 	}
+
+	// svg fill path color white
