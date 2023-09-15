@@ -24,3 +24,10 @@ body {
   background-color: var(--main-bg-color);
   margin: 0%;
 }
+
+.background {
+  background-color: #F6F6F6;
+  border-radius: 25px 25px 0px 0px;
+  z-index: 1;
+  bottom: 15
+}

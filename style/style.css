@@ -25,9 +25,27 @@ body {
   margin: 0%;
 }
 
+.background {
+  background-color: #F6F6F6;
+  border-radius: 25px 25px 0px 0px;
+  z-index: 1;
+  bottom: 15;
+}
+
 h2 {
   font-weight: 700;
   font-size: 24px;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom: solid #99E2D0;
+  width: 8%;
+  transition: ease-in-out 0.3s;
+}
+h4:hover {
+  width: 15%;
 }
 
 .button {
@@ -119,24 +137,6 @@ h2 {
   padding-bottom: 50px;
 }
 
-.etapes {
-  align-items: center;
-  text-align: center;
-  display: flex;
-  border: none;
-  position: relative;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  background-color: #F6F6F6;
-  width: 90%;
-  border-radius: 25px;
-  padding: 10px 42px;
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 25px;
-  gap: 30px;
-}
-
 /*********** Restaurant ***********/
 .restaurant {
   display: grid;
@@ -206,6 +206,38 @@ h2 {
   top: 15px;
 }
 
+.etapes {
+  display: flex;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.etapes-item {
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background-color: #F6F6F6;
+  gap: 30px;
+  margin-bottom: 25px;
+  padding: 10px 42px;
+}
+
+.etapes-title {
+  font-size: 16px;
+  margin: 0px;
+}
+
+.etapes-text {
+  font-size: 16px;
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .circle {
   position: absolute;
   display: flex;
@@ -238,6 +270,46 @@ h2 {
   color: rbga(147, 86, 220 1);
 }
 
+.menu-card {
+  display: flex;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: white;
+  flex-direction: column;
+  padding: 15px;
+  margin-top: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-ligne {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 30%;
+  height: 30%;
+  transition: right 0.1s ease-in;
+}
+
+.menu-icon:active {
+  right: 0;
+}
+
 /*********** Footer ***********/
 .footer {
   background-color: #353535;
@@ -265,18 +337,22 @@ h2 {
   position: relative;
 }
 
-.presentation {
+.main-image {
   display: flex;
   position: relative;
   width: 375px;
   height: 275px;
   flex-shrink: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
-.background {
-  width: 100%;
-  height: 50%;
-  position: absolute;
-  z-index: 0;
+.presentation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */
