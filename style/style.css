@@ -71,11 +71,17 @@ h4:hover {
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.4);
   background-image: linear-gradient(193.33deg, #a376f8 -11.44%, #fc89dd 123.93%);
 }
+.button .button_back {
+  display: flex;
+  justify-content: center;
+}
 
 /*********** Header ***********/
 .title {
   display: flex;
   justify-content: center;
+  text-align: center;
+  align-items: center;
   background-color: var(--alternate-bg-color);
   padding: 20px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
@@ -270,6 +276,33 @@ h4:hover {
   color: rbga(147, 86, 220 1);
 }
 
+.heart__icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+.heart__icon--empty {
+  position: absolute;
+  color: black;
+}
+.heart__icon--full {
+  position: absolute;
+  opacity: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 400ms;
+}
+.heart__icon:hover .heart__icon--full {
+  opacity: 1;
+}
+.heart__icon:hover .heart__icon--empty {
+  opacity: 0;
+}
+
 .menu-card {
   display: flex;
   border: none;
@@ -298,16 +331,21 @@ h4:hover {
 }
 
 .menu-icon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   top: 0;
-  right: -50px;
+  left: 90%;
   width: 30%;
   height: 30%;
-  transition: right 0.1s ease-in;
+  transition: left 0.3s ease-in;
 }
 
-.menu-icon:active {
-  right: 0;
+.menu-card:hover .menu-icon {
+  left: 70%;
 }
 
 /*********** Footer ***********/

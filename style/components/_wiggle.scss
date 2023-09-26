@@ -83,7 +83,33 @@
 		}
 	}
 
-	// svg fill path color white
+	.heart__icon{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 16px;
+		&--empty{
+			position: absolute;
+			color: black;
+		}
+		&--full{
+			position: absolute;
+			opacity: 0;
+			background: linear-gradient(#FF79DA, #9356DC);
+			background-clip: text;
+			-webkit-background-clip: text;
+			color: transparent;
+			transition: all 400ms;
+		}
+		&:hover &--full{
+			opacity: 1;
+	
+		}
+		&:hover &--empty{
+			opacity: 0;
+		}
+	}
 
 .menu-card{
 	display: flex;
@@ -112,13 +138,18 @@
 }
 
 .menu-icon{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
 	position: absolute;
 	top: 0;
-	right: -50px;
+	left: 90%;
 	width: 30%;
 	height: 30%;
-	transition: right 0.1s ease-in;
+	transition: left 0.3s ease-in;
 }
-.menu-icon:active {
-	right: 0;
+.menu-card:hover .menu-icon {
+	left: 70%;
 }
