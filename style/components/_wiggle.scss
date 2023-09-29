@@ -16,7 +16,7 @@
 	top: 15px;
 }
 
-.etapes{
+.step{
 	display: flex;
 	border: none;
 	box-sizing: border-box;
@@ -33,15 +33,16 @@
 		background-color: #F6F6F6;
 		gap: 30px;
 		margin-bottom: 25px;
-		padding: 10px 42px;
+		padding: 7% 10%;
 	}
 }
 
-.etapes-title{
+.step-title{
 	font-size: 16px;
 	margin: 0px;
+	font-weight: bold;
 }
-.etapes-text{
+.step-text{
 	font-size: 16px;
 	margin: 0px;
 	display: flex;
@@ -83,33 +84,7 @@
 		}
 	}
 
-	.heart__icon{
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-right: 16px;
-		&--empty{
-			position: absolute;
-			color: black;
-		}
-		&--full{
-			position: absolute;
-			opacity: 0;
-			background: linear-gradient(#FF79DA, #9356DC);
-			background-clip: text;
-			-webkit-background-clip: text;
-			color: transparent;
-			transition: all 400ms;
-		}
-		&:hover &--full{
-			opacity: 1;
-	
-		}
-		&:hover &--empty{
-			opacity: 0;
-		}
-	}
+
 
 .menu-card{
 	display: flex;
@@ -128,7 +103,7 @@
 	overflow: hidden;
 }
 
-.menu-ligne{
+.menu-line{
 	display: flex;
 	flex-direction: column;
 }
@@ -136,7 +111,25 @@
 	display: flex;
 	flex-direction: column;
 }
-
+svg {
+  cursor: pointer;
+    &:hover {
+      & defs {
+        display: block;
+      }
+      & path {
+        stroke: transparent;
+        }
+    }
+  	path {
+        stroke: #000;
+        stroke-width: 1px;
+    }
+    defs {
+        display: none;
+        transition: 0.2s ease-in-out;
+    }
+}
 .menu-icon{
 	display: flex;
 	flex-direction: row;
@@ -153,3 +146,4 @@
 .menu-card:hover .menu-icon {
 	left: 70%;
 }
+

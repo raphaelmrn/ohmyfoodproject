@@ -29,7 +29,8 @@ body {
   background-color: #F6F6F6;
   border-radius: 25px 25px 0px 0px;
   z-index: 1;
-  bottom: 15;
+  margin: -40px 0px 0px 0px;
+  position: inherit;
 }
 
 h2 {
@@ -131,7 +132,7 @@ h4:hover {
 }
 
 /*********** Fonctionnement ***********/
-.fonctionnement {
+.functioning {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -212,7 +213,7 @@ h4:hover {
   top: 15px;
 }
 
-.etapes {
+.step {
   display: flex;
   border: none;
   box-sizing: border-box;
@@ -222,22 +223,23 @@ h4:hover {
   font-size: 16px;
   font-weight: 500;
 }
-.etapes-item {
+.step-item {
   align-items: center;
   text-align: center;
   position: relative;
   background-color: #F6F6F6;
   gap: 30px;
   margin-bottom: 25px;
-  padding: 10px 42px;
+  padding: 7% 10%;
 }
 
-.etapes-title {
+.step-title {
   font-size: 16px;
   margin: 0px;
+  font-weight: bold;
 }
 
-.etapes-text {
+.step-text {
   font-size: 16px;
   margin: 0px;
   display: flex;
@@ -276,33 +278,6 @@ h4:hover {
   color: rbga(147, 86, 220 1);
 }
 
-.heart__icon {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 16px;
-}
-.heart__icon--empty {
-  position: absolute;
-  color: black;
-}
-.heart__icon--full {
-  position: absolute;
-  opacity: 0;
-  background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: all 400ms;
-}
-.heart__icon:hover .heart__icon--full {
-  opacity: 1;
-}
-.heart__icon:hover .heart__icon--empty {
-  opacity: 0;
-}
-
 .menu-card {
   display: flex;
   border: none;
@@ -320,7 +295,7 @@ h4:hover {
   overflow: hidden;
 }
 
-.menu-ligne {
+.menu-line {
   display: flex;
   flex-direction: column;
 }
@@ -328,6 +303,24 @@ h4:hover {
 .menu-text {
   display: flex;
   flex-direction: column;
+}
+
+svg {
+  cursor: pointer;
+}
+svg:hover defs {
+  display: block;
+}
+svg:hover path {
+  stroke: transparent;
+}
+svg path {
+  stroke: #000;
+  stroke-width: 1px;
+}
+svg defs {
+  display: none;
+  transition: 0.2s ease-in-out;
 }
 
 .menu-icon {
@@ -371,16 +364,24 @@ h4:hover {
 }
 
 /*********** presentation ***********/
+.menu-params {
+  color: #000;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
 .main {
   position: relative;
 }
 
 .main-image {
   display: flex;
-  position: relative;
   width: 375px;
   height: 275px;
-  flex-shrink: 0;
   z-index: 2;
 }
 
@@ -393,4 +394,23 @@ h4:hover {
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 10px;
+}
+
+.title-params {
+  color: var(--Black, #101010);
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.menu-title {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
 }/*# sourceMappingURL=style.css.map */
