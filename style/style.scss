@@ -1,4 +1,8 @@
 @import "./components/setup";
+@import "./components/cards";
+@import "./components/wiggle";
+@import "./components/button";
+
 h2{
     font-weight: 700;
     font-size: 24px;
@@ -14,10 +18,9 @@ h4{
 	}
 }
 
-@import "./components/button";
-
 /*********** Header ***********/
 .title {
+	position: relative;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -70,12 +73,21 @@ h4{
 
 /*********** Fonctionnement ***********/
 .functioning{
+	background-color: var(--alternate-bg-color);
+
+}
+
+.functioning-title{
+	display: flex;
+	padding-left: 30px;
+}
+
+.functioning-step{
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
-	background-color: var(--alternate-bg-color);
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-bottom: 50px;
@@ -87,7 +99,6 @@ h4{
 	display: grid;
 	justify-items: center;
 	grid-template-columns: 1fr;
-	padding-right: 15px;
 	padding-bottom: 90px;
 	gap: 30px;
 }
@@ -96,8 +107,7 @@ h4{
 	padding-left: 30px;
 	padding-bottom: 10px;
 }
-@import "./components/cards";
-@import "./components/wiggle";
+
 
 /*********** Footer ***********/
 .footer{
@@ -124,21 +134,22 @@ h4{
 /*********** presentation ***********/
 .menu-params{
 	color: #000;
-font-family: Roboto;
-font-size: 16px;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
-text-transform: uppercase;
+	font-family: Roboto;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	text-transform: uppercase;
 }
 
 .main {
 	position: relative
 }
 
-.main-image{
+.main-image img{
 	display: flex;
-	width: 375px;
+	object-fit: cover;
+	width: 414px;
 	height: 275px;
 	z-index: 2;
 }
@@ -171,4 +182,52 @@ text-transform: uppercase;
 	justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+@media screen and (min-width: 415px ){
+.icon{
+	padding-left: 3%;
+}
+
+h2{
+	font-weight: 700;
+	font-size: 40px;
+}
+
+.functioning{
+	padding-left: 180px;
+	padding-right: 180px;
+	padding-bottom: 50px;
+}
+
+.functioning-step{
+	display: grid;
+	justify-items: center;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	padding-left: 0px;
+	padding-right: 0px;
+}  
+
+.step{
+	&-item{
+		padding: 40px;
+		max-width: 322px;
+		max-height: 72px;
+	}
+}
+
+.restaurant{
+	grid-template-columns: 1fr 1fr;
+	padding-left: 180px;
+	padding-right: 180px;
+}
+
+.card{
+	width: 80%;
+}
+
+.card-header img{
+	width: 100%;
+}
 }
