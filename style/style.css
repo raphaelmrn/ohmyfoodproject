@@ -71,15 +71,19 @@ body {
 
 .loader-container {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: grey;
-  animation: fadeOut 3s linear;
+  animation: fadeOut 3s linear forwards, changeZIndex 3 0s linear 4s forwards;
+  animation-fill-mode: forwards;
+  pointer-events: none;
 }
 
-.loader {
+.loader::before {
+  content: "";
   position: fixed;
   top: 50%;
   left: 50%;
@@ -89,12 +93,7 @@ body {
   border: 4px solid;
   border-top: 4px solid transparent;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-.content {
-  position: relative;
-  z-index: 1;
+  animation: spin 3s forwards;
 }
 
 @keyframes spin {
@@ -141,6 +140,7 @@ body {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   width: 90%;
   border-radius: 25px;
+  min-width: 200px;
   font-size: 16px;
   font-weight: 500;
 }
@@ -218,6 +218,8 @@ body {
   border-radius: 15px;
   font-size: 16px;
   font-weight: 500;
+  max-width: 363px;
+  max-height: 67px;
   background-color: white;
   flex-direction: column;
   margin-top: 12px;
@@ -238,7 +240,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  transition: 0.2s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .menu-price {
@@ -266,7 +268,7 @@ svg.heart path {
   left: 100%;
   width: -moz-fit-content;
   width: fit-content;
-  transition: 0.3s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .menu-card:hover .menu-icon {
@@ -283,7 +285,6 @@ svg.heart path {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 .button__purple {
   border: none;
@@ -291,6 +292,7 @@ svg.heart path {
   align-items: center;
   display: flex;
   border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   color: var(--alternate-bg-color);
   font-size: 16px;
@@ -424,8 +426,9 @@ h4:hover {
   color: white;
 }
 .footer .footer_list {
-  padding: 0px;
+  padding-bottom: 20px;
   margin: 0px;
+  padding-left: 0px;
 }
 .footer .footer-title {
   padding-bottom: 16px;
@@ -456,7 +459,8 @@ h4:hover {
   display: flex;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 414px;
+  width: 100%;
+  max-width: 414px;
   height: 275px;
   z-index: 2;
 }
@@ -499,10 +503,21 @@ h4:hover {
     font-weight: 700;
     font-size: 40px;
   }
+  h4 {
+    width: 6%;
+    transition: ease-in-out 0.3s;
+    padding-bottom: 5px;
+  }
+  h4:hover {
+    width: 10%;
+  }
   .functioning {
     padding-left: 180px;
     padding-right: 180px;
     padding-bottom: 50px;
+  }
+  .functioning-title {
+    padding-left: 80px;
   }
   .functioning-step {
     display: grid;
@@ -517,6 +532,9 @@ h4:hover {
     max-width: 322px;
     max-height: 72px;
   }
+  .bis {
+    padding-left: 240px;
+  }
   .restaurant {
     grid-template-columns: 1fr 1fr;
     padding-left: 180px;
@@ -524,8 +542,54 @@ h4:hover {
   }
   .card {
     width: 80%;
+    min-width: 300px;
   }
   .card-header img {
     width: 100%;
+  }
+  .menu-card:hover .menu-text {
+    width: 91%;
+  }
+  .menu-card {
+    margin: inherit auto;
+    max-width: 640px;
+  }
+  .footer {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .footer .footer-title {
+    padding-bottom: 0px;
+  }
+  .footer_list {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .footer-step {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+  .main-image img {
+    width: 100%;
+    height: 500px;
+    max-width: 100%;
+  }
+  .background {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1055px;
+  }
+  .menu-title {
+    justify-content: center;
+    gap: 20px;
+  }
+  .button_back {
+    right: 95%;
   }
 }/*# sourceMappingURL=style.css.map */
