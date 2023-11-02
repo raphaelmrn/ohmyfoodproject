@@ -15,7 +15,7 @@
 	content: "";
 	position: fixed;
 	top: 50%;
-	left: 50%;
+	left: 45%;
 	transform: translate(-50%, -50%);
 	width: 40px;
 	height: 40px;
@@ -130,7 +130,7 @@
 
 .icones{
 	&:active{
-		color: rbga(147, 86, 220 1);
+		color: rgba(147, 86, 220, 1);
 		}
 	}
 

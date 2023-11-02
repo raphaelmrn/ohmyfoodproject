@@ -117,8 +117,7 @@ h4{
 	padding: 25px;
 	color: white;
 	.footer_list{
-		padding-bottom: 20px;
-		margin: 0px;
+		margin-bottom: 20px;
 		padding-left: 0px;
 	}
 	.footer-title{
@@ -188,6 +187,7 @@ h4{
   padding-right: 20px;
 }
 
+
 @media screen and (min-width: 415px ){
 .icon{
 	padding-left: 3%;
@@ -214,23 +214,17 @@ h4{
 }
 
 .functioning-title{
-	padding-left: 80px;
+	padding-left: 50px;
 }
 
-.functioning-step{
-	display: grid;
-	justify-items: center;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 20px;
-	padding-left: 0px;
-	padding-right: 0px;
-}  
+
 
 .step{
 	&-item{
 		padding: 40px;
 		max-width: 322px;
 		max-height: 72px;
+		min-width: 305px;
 	}
 }
 
@@ -239,10 +233,13 @@ h4{
 }
 
 .restaurant{
-	grid-template-columns: 1fr 1fr;
-	padding-left: 180px;
-	padding-right: 180px;
+	display: grid;
+	justify-items: center;
+	grid-template-columns: 1fr;
+	padding-bottom: 90px;
+	gap: 30px;
 }
+
 
 .card{
 	width: 80%;
@@ -262,7 +259,7 @@ h4{
 }
 
 .menu-card{
-	margin: inherit auto;
+	margin: 6px;
 	max-width: 640px;
 }
 
@@ -310,4 +307,21 @@ h4{
 .button_back{
   right: 95%;
 }
+}
+
+@media screen and (min-width: 980px){
+	.functioning-step{
+		display: grid;
+		justify-items: center;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}  
+
+	.restaurant{
+		grid-template-columns: 1fr 1fr;
+		padding-left: 180px;
+		padding-right: 180px;
+	}
 }

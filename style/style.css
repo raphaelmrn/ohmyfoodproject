@@ -86,7 +86,7 @@ body {
   content: "";
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 45%;
   transform: translate(-50%, -50%);
   width: 40px;
   height: 40px;
@@ -206,7 +206,7 @@ body {
 }
 
 .icones:active {
-  color: rbga(147, 86, 220 1);
+  color: rgb(147, 86, 220);
 }
 
 .menu-card {
@@ -426,8 +426,7 @@ h4:hover {
   color: white;
 }
 .footer .footer_list {
-  padding-bottom: 20px;
-  margin: 0px;
+  margin-bottom: 20px;
   padding-left: 0px;
 }
 .footer .footer-title {
@@ -517,28 +516,23 @@ h4:hover {
     padding-bottom: 50px;
   }
   .functioning-title {
-    padding-left: 80px;
-  }
-  .functioning-step {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 50px;
   }
   .step-item {
     padding: 40px;
     max-width: 322px;
     max-height: 72px;
+    min-width: 305px;
   }
   .bis {
     padding-left: 240px;
   }
   .restaurant {
-    grid-template-columns: 1fr 1fr;
-    padding-left: 180px;
-    padding-right: 180px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    padding-bottom: 90px;
+    gap: 30px;
   }
   .card {
     width: 80%;
@@ -551,7 +545,7 @@ h4:hover {
     width: 91%;
   }
   .menu-card {
-    margin: inherit auto;
+    margin: 6px;
     max-width: 640px;
   }
   .footer {
@@ -591,5 +585,20 @@ h4:hover {
   }
   .button_back {
     right: 95%;
+  }
+}
+@media screen and (min-width: 980px) {
+  .functioning-step {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .restaurant {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 180px;
+    padding-right: 180px;
   }
 }/*# sourceMappingURL=style.css.map */
