@@ -166,6 +166,8 @@ h4{
 	padding-left: 5px;
 	padding-right: 5px;
 	padding-bottom: 10px;
+	opacity: 1;
+  transform: translateY(0);
 }
 
 .title-params{
@@ -185,6 +187,12 @@ h4{
 	justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.crop-text {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden; 
 }
 
 

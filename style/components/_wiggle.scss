@@ -134,7 +134,16 @@
 		}
 	}
 
-
+	@keyframes fadeIn {
+		0% {
+				opacity: 0;
+				transform: translateY(20px);
+		}
+		100% {
+				opacity: 1;
+				transform: translateY(0);
+		}
+}
 
 .menu-card{
 	display: flex;
@@ -154,10 +163,26 @@
 	position: relative;
 	overflow: hidden;
 	
+	&-starter{
+	opacity: 1;
+  animation: fadeIn 1.0s ease-in-out;
+	}
+
+	&-dish{
+	opacity: 1;
+  animation: fadeIn 1.5s ease-in-out;
+	}
+
+	&-sweet{
+	opacity: 1;
+	animation: fadeIn 2.0s ease-in-out;
+	}
+	
 	&:hover .menu-text{
 		width: 80%;
 	}
 }
+
 
 .menu-line{
 	display: flex;
@@ -170,6 +195,7 @@
 	width: 100%;
 	transition: 0.4s ease-in-out;
 }
+
 .menu-price{
 	display: flex;
 }

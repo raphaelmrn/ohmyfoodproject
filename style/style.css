@@ -209,6 +209,16 @@ body {
   color: rgb(147, 86, 220);
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .menu-card {
   display: flex;
   border: none;
@@ -226,6 +236,18 @@ body {
   padding: 15px;
   position: relative;
   overflow: hidden;
+}
+.menu-card-starter {
+  opacity: 1;
+  animation: fadeIn 1s ease-in-out;
+}
+.menu-card-dish {
+  opacity: 1;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.menu-card-sweet {
+  opacity: 1;
+  animation: fadeIn 2s ease-in-out;
 }
 .menu-card:hover .menu-text {
   width: 80%;
@@ -473,6 +495,8 @@ h4:hover {
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 10px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .title-params {
@@ -492,6 +516,12 @@ h4:hover {
   justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.crop-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 415px) {
